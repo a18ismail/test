@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95e0fe0c-07ed-42bd-9984-eda18a4472dc" name="Default Changelist" comment="" />
+    <list default="true" id="95e0fe0c-07ed-42bd-9984-eda18a4472dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modal.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modals/modal.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/project/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -26,7 +36,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/joborwork_project" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/modals" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,11 +56,33 @@
       <updated>1588842439397</updated>
       <workItem from="1588842444612" duration="12000" />
       <workItem from="1588842472248" duration="37000" />
-      <workItem from="1588853263839" duration="297000" />
+      <workItem from="1588853263839" duration="9540000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="489" y="55" width="379" height="629" key="#com.intellij.ide.util.MemberChooser" timestamp="1588862080272">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="489" y="55" width="379" height="629" key="#com.intellij.ide.util.MemberChooser/0.0.1366.743@0.0.1366.743" timestamp="1588862080272" />
+    <state x="416" y="130" width="526" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1588861316058">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="416" y="130" width="526" height="479" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.743@0.0.1366.743" timestamp="1588861316058" />
+    <state x="466" y="130" width="426" height="479" key="FileChooserDialogImpl" timestamp="1588853992955">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="466" y="130" width="426" height="479" key="FileChooserDialogImpl/0.0.1366.743@0.0.1366.743" timestamp="1588853992955" />
+    <state x="492" y="67" width="374" height="605" key="RollbackChangesDialog" timestamp="1588853559490">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="492" y="67" width="374" height="605" key="RollbackChangesDialog/0.0.1366.743@0.0.1366.743" timestamp="1588853559490" />
+    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup" timestamp="1588858107836">
+      <screen x="0" y="0" width="1366" height="743" />
+    </state>
+    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup/0.0.1366.743@0.0.1366.743" timestamp="1588858107836" />
   </component>
 </project>

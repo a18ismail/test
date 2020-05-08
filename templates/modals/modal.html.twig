@@ -1,6 +1,6 @@
 {% block modal %}
 
-<div class="modal fade" role="dialog">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -8,20 +8,30 @@
                 <h1 class="modal-title h3 mb-3 font-weight-normal">Please sign in</h1>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body">
-                <form class="form-signin">
-                    <label for="inputUser" class="sr-only">User</label>
-                    <input type="text" id="inputUser" class="form-control" placeholder="User" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                </form>
-                <p id="message" class= "message-error"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="botoIni" class="btn btn-lg btn-primary btn-block">Sign in</button>
-            </div>
+            <form class="form-signin" action="{{ path('login') }}" method="POST">
+
+                <div class="modal-body">
+                        <div class="mb-2">
+                            <label for="inputEmail" class="sr-only">User</label>
+                            <input name="inputEmail" type="text" id="inputEmail" class="form-control" placeholder="User" required autofocus>
+                        </div>
+                        <div class="mb-2">
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input name="inputPassword" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        </div>
+                    <!-- <p id="message" class= "message-error"></p> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="bttnLogin" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                </div>
+
+            </form>
         </div>
     </div>
 </div>
+
+<!-- <script> </script> -->
+<!-- AQUI ANIRÁ CODI JS PER REALITZAR PETICIÓ AJAX EN CAS DE NO VOLER REDIRECCIONAR A UNA PAGINA -->
+
 
 {% endblock %}

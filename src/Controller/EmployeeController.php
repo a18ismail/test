@@ -18,4 +18,9 @@ class EmployeeController extends AbstractController
         $employee = null;
         return $this->render('employee/profile.html.twig');
     }
+
+    public function registerEmployee(){
+
+    }
+
 }

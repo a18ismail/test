@@ -16,10 +16,16 @@
                 </li>
             </ul>
             <div>
-                <button class="btn btn-outline-success my-2 my-sm-0 mr-1"> Login </button>
+                {% if login_status == false %}
+                    <button class="btn btn-primary my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#exampleModal"> Login </button>
+                {% else %}
+                    <a class="btn btn-danger my-2 my-sm-0 mr-1" href="{{ path("logout") }}"> Logout </a>
+                {% endif %}
             </div>
         </div>
     </nav>
+
+    {% include('modals/modal.html.twig') %}
 
 </header>
 

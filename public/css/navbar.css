@@ -1,0 +1,6 @@
+
+/*Color <a> en NavBar*/
+a:not([href]):not([tabindex]) {
+    color: white;
+    text-decoration: none;
+}

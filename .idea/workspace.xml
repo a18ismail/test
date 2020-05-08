@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95e0fe0c-07ed-42bd-9984-eda18a4472dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profiles/profile_image_stock01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/profiles/profile_image_stock02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200508044226.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modals/edit_profile.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modals/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu/navBar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu/navBar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modals/modal.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modals/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +52,7 @@
       <workItem from="1588842444612" duration="12000" />
       <workItem from="1588842472248" duration="37000" />
       <workItem from="1588853263839" duration="13487000" />
-      <workItem from="1588906595441" duration="10917000" />
+      <workItem from="1588906595441" duration="11231000" />
     </task>
     <servers />
   </component>

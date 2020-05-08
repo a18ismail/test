@@ -10,11 +10,15 @@
     </head>
     <body>
         {% block body %}
+            <h3>SI ESTAS VEIENT AQUEST TEXT, LA RENDERITZACIÓ NO HA CARREGAT EL BODY</h3>
             {% block header %}{% endblock %}
         {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
-    <footer>
-        {% include('footers/footerSimple.html.twig') %}
-    </footer>
+    {% block footer %}
+        <footer>
+            {% include('footers/footerSimple.html.twig') %}
+        </footer>
+    {% endblock %}
+
 </html>

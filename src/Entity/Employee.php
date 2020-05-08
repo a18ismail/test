@@ -42,6 +42,11 @@ class Employee
      */
     private $nif;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $phoneNumber;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Employee
     public function setNif(string $nif): self
     {
         $this->nif = $nif;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?int
+    {
+        return $this->phoneNumber;
+    }
+
+    public function setPhoneNumber(?int $phoneNumber): self
+    {
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }

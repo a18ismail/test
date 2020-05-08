@@ -29,20 +29,9 @@ class MainController extends AbstractController
         $password = $request->get('inputPassword');
 
         //Netejar dades i codificar contrasenya
+        //També es pot fer amb JS costat client
+        //Millor fer en costat servidor per assegurar integritat
         // TODO
-
-        // PROVISIONAL
-       /* $entityManager = $this->getDoctrine()->getManager();
-
-        $newEmployee = new Employee();
-        $newEmployee->setName('Prova');
-        $newEmployee->setSurnames('ProvaProva');
-        $newEmployee->setNif('XXXXXXXXX');
-        $newEmployee->setEmail($email);
-        $newEmployee->setPassword($password);
-
-        $entityManager->persist($newEmployee);
-        $entityManager->flush();*/
 
         //Comprobar dades de Empleat
         $employee = $this->getDoctrine()->getRepository(Employee::class)->checkEmployeeLogin($email, $password);
@@ -51,8 +40,43 @@ class MainController extends AbstractController
         if ( sizeof($employee) == 0 ){
             return $this->render('base.html.twig');
         } else{
-            return $this->render('dashboard/profile.html.twig', ['employee' => $employee, 'login_status' => true]);
+            return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0], 'login_status' => true]);
         }
+    }
+
+    /**
+     * @Route("/register", name="register")
+     */
+    public function register(Request $request)
+    {
+        //Rebre dades formulari de registre
+        $email = $request->get('registerEmail');
+        $password = $request->get('registerPassword');
+        $name = $request->get('registerName');
+        $surnames = $request->get('registerSurnames');
+
+        // PROVISIONAL
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $newEmployee = new Employee();
+        $newEmployee->setName($name);
+        $newEmployee->setSurnames($surnames);
+        $newEmployee->setNif('XXXXXXXXX');
+        $newEmployee->setPhoneNumber(1111111111);
+        $newEmployee->setEmail($email);
+        $newEmployee->setPassword($password);
+
+        $entityManager->persist($newEmployee);
+        $entityManager->flush();
+
+        $employee = $this->getDoctrine()->getRepository(Employee::class)->checkEmployeeLogin($email, $password);
+
+        if ( sizeof($employee) == 0 ){
+            return $this->render('base.html.twig');
+        } else{
+            return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0], 'login_status' => true]);
+        }
+
     }
 
     /**

@@ -21,13 +21,15 @@ class AppFixtures extends Fixture
             $email = 'user_'.$i.'_mail@gmail.com';
             $password = 'password';
             $nif = "XXXXXXXXX".$i;
+            $phoneNumber = $i.$i.$i.$i.$i.$i.$i.$i.$i;
 
             $employee = new Employee();
             $employee->setEmail($email)
                 ->setName($name)
                 ->setSurnames($surnames)
                 ->setPassword($password)
-                ->setNif($nif);
+                ->setNif($nif)
+                ->setPhoneNumber($phoneNumber);
             $manager->persist($employee);
 
         }

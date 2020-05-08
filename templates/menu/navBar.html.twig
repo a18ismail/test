@@ -2,22 +2,23 @@
 <header>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Projecte Final</a>
+        <a class="navbar-brand">Projecte Final</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ path("index") }}">Inici <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Serveis</a>
+                    <a class="nav-link" href="{{ path("index") }}">Serveis</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosaltres</a>
+                    <a class="nav-link" href="{{ path("index") }}">Sobre Nosaltres</a>
                 </li>
             </ul>
             <div>
                 {% if login_status == false %}
-                    <button class="btn btn-primary my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#exampleModal"> Login </button>
+                    <button class="btn btn-secondary my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#registerModal"> Registre </button>
+                    <button class="btn btn-primary my-2 my-sm-0 mr-1" type="button" data-toggle="modal" data-target="#loginModal"> Login </button>
                 {% else %}
                     <a class="btn btn-danger my-2 my-sm-0 mr-1" href="{{ path("logout") }}"> Logout </a>
                 {% endif %}
@@ -25,7 +26,8 @@
         </div>
     </nav>
 
-    {% include('modals/modal.html.twig') %}
+    {% include('modals/login.html.twig') %}
+    {% include('modals/register.html.twig') %}
 
 </header>
 

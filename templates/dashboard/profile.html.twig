@@ -4,12 +4,148 @@
 
 {% block body %}
 
+    {%  block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/profile.css' ) }}">
+    {% endblock %}
+
     {% block header %}
         {% include('menu/navBar.html.twig') %}
     {% endblock %}
 
-    <main role="main" class="container">
-        <h1 class="mt-5">Perfil usuari</h1>
-    </main>
+    <div class="container emp-profile">
+        <form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <!-- EXEMPLE PER CONSEGUIR FOTO DE PERFIL SEGONS EL NOM DE L'EMPLEAT UTILITZANT ASSETS -->
+                        <!-- <img src="{{ asset('images/profiles/' ~ employee.name ) }}" alt="Foto de {{ employee.name }}"/> -->
+                        <img src="{{ asset('/images/profiles/profile_image_stock01.png' ) }}" alt="Foto de {{ employee.name }}"/>
+                        <div class="file btn btn-lg btn-primary">
+                            Actualitza la teva fotografia
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            {{ employee.name }} {{ employee.surnames }}
+                        </h5>
+                        <h6>
+                            Empleat
+                        </h6>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Informació personal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Curriculum</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p>Links</p>
+                        <a href="google.es">Website Link</a><br/>
+                        <a href="google.es">LinkedIn</a><br/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> {{ employee.name }} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Surnames</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> {{ employee.surnames }} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> {{ employee.email }} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Phone Number</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> {{ employee.phoneNumber }} </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>NIF</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>123 456 7890</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Anys d'experiencia</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>2 anys</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Data de registre</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> 8/05/2020 </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Nivell d'Anglès</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>B1</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Ultima connexió</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p> Fa 5 mesos </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label> Biografia </label><br/>
+                                    <a> Benvingut a l'empresa! Afegeix aqui la teva introducció. </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
+
+{# HEREDEM EL FOOTER PERO EL DEIXEM BUIT PER NO MOSTRAR-LO #}
+{% block footer %} {% endblock %}

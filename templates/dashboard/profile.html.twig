@@ -1,151 +1,150 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}App - Profile{% endblock %}
+{% block title %}App{% endblock %}
 
 {% block body %}
+    <div class="wrapper">
+        <!-- Top Navbar -->
+        {{ include('menu/topNavBar.html.twig') }}
+        <!-- /.topNavbar -->
 
-    {%  block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('css/profile.css' ) }}">
-    {% endblock %}
+        <!-- Side Navbar -->
+        {{ include('menu/sideNavBar.html.twig') }}
+        <!-- /.sideNavbar -->
 
-    {% block header %}
-        {% include('menu/navBar.html.twig') %}
-    {% endblock %}
+        <!-- Content Wrapper -->
+        {# EN AQUEST DIV VA EL CONTINGUT #}
+        <div class="content-wrapper">
 
-    <div class="container emp-profile">
-        <form>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="profile-img">
-                        <!-- EXEMPLE PER CONSEGUIR FOTO DE PERFIL SEGONS EL NOM DE L'EMPLEAT UTILITZANT ASSETS -->
-                        <!-- <img src="{{ asset('images/profiles/' ~ employee.name ) }}" alt="Foto de {{ employee.name }}"/> -->
-                        <img src="{{ asset('./images/profiles/profile_image_stock01.png' ) }}" alt="Foto de {{ employee.name }}"/>
-                        <div class="file btn btn-lg btn-primary">
-                            Actualitza la teva fotografia
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Panell de control</h1>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="profile-head">
-                        <h5>
-                            {{ employee.name }} {{ employee.surnames }}
-                        </h5>
-                        <h6>
-                            Empleat
-                        </h6>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Informació personal</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Curriculum</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="profile-work">
-                        <p>Links</p>
-                        <a href="google.es">Website Link</a><br/>
-                        <a href="google.es">LinkedIn</a><br/>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="tab-content profile-tab" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Name</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> {{ employee.name }} </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Surnames</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> {{ employee.surnames }} </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Email</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> {{ employee.email }} </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Phone Number</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> {{ employee.phoneNumber }} </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>NIF</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>123 456 7890</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Anys d'experiencia</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>2 anys</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Data de registre</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> 8/05/2020 </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Nivell d'Anglès</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>B1</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Ultima connexió</label>
-                                </div>
-                                <div class="col-md-6">
-                                    <p> Fa 5 mesos </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label> Biografia </label><br/>
-                                    <a> Benvingut a l'empresa! Afegeix aqui la teva introducció. </a>
-                                </div>
-                            </div>
+                        <div class="col-sm-6">
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+            <!-- /.content-header -->
+
+            <!-- Main Container -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+
+              <!-- Profile Image -->
+              <!-- Widget: user widget style 1 -->
+              <div class="card card-widget widget-user">
+                <!-- Add the bg color to the header using any of the bg-* classes -->
+                <div class="widget-user-header text-white"
+                  style="background: url('https://i.ytimg.com/vi/BEDlpGLVy3A/maxresdefault.jpg') center center;">
+                  <h3 class="widget-user-username text-right">Mike Wazowski</h3>
+                  <h5 class="widget-user-desc text-right">Programador FP</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img class="img-circle elevation-2"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5_LGBtY8DWoTjx6nxMzYWL4qdZzpIJwdGlZdayGvGO4XkxRd_&usqp=CAU"
+                    alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">EMAIL</h5>
+                        <span>mike@wazowski.com</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">PHONE NUMBER</h5>
+                        <span class="description-text">696969696</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header">NIF</h5>
+                        <span class="description-text">69696969A</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+              </div>
+              <!-- /.widget-user -->
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+
+          <!-- About Me Box -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">About Me</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <strong><i class="fas fa-birthday-cake"></i> Birthday</strong>
+
+              <p class="text-muted">69/69/69</p>
+
+              <hr>
+
+              <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
+
+              <p class="text-muted">Malibu, California</p>
+
+              <hr>
+
+              <strong><i class="fas fa-address-card"></i> Postcode</strong>
+
+              <p class="text-muted">69696</p>
+
+              <hr>
+
+              <strong><i class="fas fa-user-md"></i> NSS</strong>
+
+              <p class="text-muted">numero seguridad social</p>
+
+              <hr>
+
+              <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
+              </p>
+
+              <hr>
+              <strong><i class="fas fa-users"></i> Social Networks</strong>
+              <div>
+                <a href="#" class="icon-block">
+                  <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+
+                <a href="#" class="icon-block">
+                  <i class="fab fa-twitter fa-3x"></i>
+                </a>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        {{ include('footers/footerDashboard.html.twig') }}
     </div>
-
+    <!-- ./wrapper -->
 {% endblock %}
-
-{# HEREDEM EL FOOTER PERO EL DEIXEM BUIT PER NO MOSTRAR-LO #}
-{% block footer %} {% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}App{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <!-- Top Navbar -->
+        {{ include('menu/topNavBar.html.twig') }}
+        <!-- /.topNavbar -->
+
+        <!-- Side Navbar -->
+        {{ include('menu/sideNavBar.html.twig') }}
+        <!-- /.sideNavbar -->
+
+        <!-- Content Wrapper -->
+        {# EN AQUEST DIV VA EL CONTINGUT #}
+        <div class="content-wrapper">
+
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Panell de control</h1>
+                        </div>
+                        <div class="col-sm-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main Container -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                        </div>
+                        <!-- /.col-md-6 -->
+                        <div class="col-lg-6">
+                        </div>
+                        <!-- /.col-md-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        {{ include('footers/footerDashboard.html.twig') }}
+    </div>
+    <!-- ./wrapper -->
+{% endblock %}

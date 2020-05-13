@@ -14,9 +14,7 @@ class MainController extends AbstractController
      */
     public function index()
     {
-        return $this->render('main/index.html.twig', [
-            'login_status' => false,
-        ]);
+        return $this->render('main/templatelayout.html.twig');
     }
 
     /**

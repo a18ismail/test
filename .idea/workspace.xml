@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95e0fe0c-07ed-42bd-9984-eda18a4472dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu/navBar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu/navBar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modals/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modals/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modals/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modals/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/menu/sideNavBar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu/sideNavBar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/joborwork_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -54,6 +60,10 @@
       <workItem from="1588842472248" duration="37000" />
       <workItem from="1588853263839" duration="13487000" />
       <workItem from="1588906595441" duration="13831000" />
+      <workItem from="1589260796984" duration="346000" />
+      <workItem from="1589262482106" duration="11957000" />
+      <workItem from="1589275056022" duration="9840000" />
+      <workItem from="1589372330741" duration="516000" />
     </task>
     <servers />
   </component>
@@ -61,10 +71,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="438" y="175" width="481" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588911670072">
+    <state x="438" y="175" width="518" height="388" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589264228436">
       <screen x="0" y="0" width="1366" height="743" />
     </state>
-    <state x="438" y="175" width="481" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.743@0.0.1366.743" timestamp="1588911670072" />
+    <state x="438" y="175" width="518" height="388" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.743@0.0.1366.743" timestamp="1589264228436" />
     <state x="489" y="55" width="379" height="629" key="#com.intellij.ide.util.MemberChooser" timestamp="1588862080272">
       <screen x="0" y="0" width="1366" height="743" />
     </state>
@@ -85,13 +95,13 @@
       <screen x="0" y="0" width="1366" height="743" />
     </state>
     <state x="187" y="7" key="SettingsEditor/0.0.1366.743@0.0.1366.743" timestamp="1588907593195" />
-    <state x="389" y="116" width="622" height="512" key="find.popup" timestamp="1588915317413">
+    <state x="389" y="116" width="622" height="512" key="find.popup" timestamp="1589272131779">
       <screen x="0" y="0" width="1366" height="743" />
     </state>
-    <state x="389" y="116" width="622" height="512" key="find.popup/0.0.1366.743@0.0.1366.743" timestamp="1588915317413" />
-    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup" timestamp="1588916919091">
+    <state x="389" y="116" width="622" height="512" key="find.popup/0.0.1366.743@0.0.1366.743" timestamp="1589272131779" />
+    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup" timestamp="1589264486210">
       <screen x="0" y="0" width="1366" height="743" />
     </state>
-    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup/0.0.1366.743@0.0.1366.743" timestamp="1588916919091" />
+    <state x="346" y="20" width="672" height="676" key="search.everywhere.popup/0.0.1366.743@0.0.1366.743" timestamp="1589264486210" />
   </component>
 </project>

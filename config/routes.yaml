@@ -25,6 +25,9 @@ notifications:
 mail:
     path: /mail
     controller: App\Controller\DashboardController::mail
+personalReport:
+    path: /personalReport
+    controller: App\Controller\DashboardController::personalReport
 settings:
     path: /settings
     controller: App\Controller\DashboardController::settings

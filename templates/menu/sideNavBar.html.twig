@@ -2,7 +2,7 @@
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="" class="brand-link text-center">
+        <a href="{{ path('dashboard') }}" class="brand-link text-center">
             <span class="brand-text font-weight-light">Web App</span>
         </a>
 
@@ -23,14 +23,14 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="{{ path("dashboard") }}" class="nav-link active">
+                        <a href="{{ path("dashboard") }}" class="nav-link {% if sideNavBar_active == 'dashboard' %} active {% endif %}">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>Panell de Control</p>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ path("dashboard") }}" class="nav-link">
+                        <a href="{{ path("operations") }}" class="nav-link  {% if sideNavBar_active == 'operations' %} active {% endif %}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>Operatives</p>
                         </a>
@@ -38,28 +38,28 @@
 
                     <li class="nav-header">CALENDARIS</li>
                     <li class="nav-item">
-                        <a href="{{ path("dashboard") }}" class="nav-link">
+                        <a href="{{ path("calendarOperations") }}" class="nav-link  {% if sideNavBar_active == 'calendarOperations' %} active {% endif %}">
                             <i class="nav-icon fas fa-calendar"></i>
                             <p>Calendari d'Operatives</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ path("dashboard") }}" class="nav-link">
-                            <i class="nav-icon fas fa-calendar"></i>
+                        <a href="{{ path("calendarAvailability") }}" class="nav-link  {% if sideNavBar_active == 'calendarAvailability' %} active {% endif %}">
+                            <i class="nav-icon fas fa-calendar-check"></i>
                             <p>Calendari Disponibiltat</p>
                         </a>
                     </li>
 
                     <li class="nav-header">MISSATGES</li>
                     <li class="nav-item">
-                        <a href="{{ path("mail") }}" class="nav-link">
+                        <a href="{{ path("mail") }}" class="nav-link {% if sideNavBar_active == 'mail' %} active {% endif %}">
                             <i class="nav-icon fas fa-envelope-open"></i>
                             <p>Missatges</p>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ path("notifications") }}" class="nav-link">
+                        <a href="{{ path("notifications") }}" class="nav-link {% if sideNavBar_active == 'notifications' %} active {% endif %}">
                             <i class="nav-icon fas fa-envelope"></i>
                             <p>Notificacions</p>
                         </a>
@@ -67,7 +67,7 @@
 
                     <li class="nav-header">INFORMES</li>
                     <li class="nav-item">
-                        <a href="{{ path("dashboard") }}" class="nav-link">
+                        <a href="{{ path("personalReport") }}" class="nav-link {% if sideNavBar_active == 'personalReport' %} active {% endif %}">
                             <i class="nav-icon fas fa-th"></i>
                             <p>Informe personal</p>
                         </a>
@@ -75,7 +75,7 @@
 
                     <li class="nav-header">CONFIGURACIÓ</li>
                     <li class="nav-item">
-                        <a href="{{ path("settings") }}" class="nav-link">
+                        <a href="{{ path("settings") }}" class="nav-link {% if sideNavBar_active == 'settings' %} active {% endif %}">
                             <i class="nav-icon fas fa-cogs"></i>
                             <p>Configuració</p>
                         </a>

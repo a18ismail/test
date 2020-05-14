@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}App{% endblock %}
+{% block title %}Perfil - App{% endblock %}
 
 {% block body %}
     <div class="wrapper">
@@ -9,7 +9,7 @@
         <!-- /.topNavbar -->
 
         <!-- Side Navbar -->
-        {{ include('menu/sideNavBar.html.twig', {'employee': employee}) }}
+        {{ include('menu/sideNavBar.html.twig', {'employee': employee, 'sideNavBar_active': 'profile'}) }}
         <!-- /.sideNavbar -->
 
         <!-- Content Wrapper -->
@@ -34,115 +34,116 @@
             <div class="content">
                 <div class="container-fluid">
                     <div class="row d-flex justify-content-center">
-            <div class="col-lg-6">
+                        <div class="col-lg-6">
 
-              <!-- Profile Image -->
-              <!-- Widget: user widget style 1 -->
-              <div class="card card-widget widget-user">
-                <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="widget-user-header text-white"
-                  style="background: url('https://i.ytimg.com/vi/BEDlpGLVy3A/maxresdefault.jpg') center center;">
-                  <h3 class="widget-user-username text-right"> {{ employee.name }} </h3>
-                  <h5 class="widget-user-desc text-right"> {{ employee.surnames }} </h5>
-                </div>
-                <div class="widget-user-image">
-                  <img class="img-circle elevation-2"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5_LGBtY8DWoTjx6nxMzYWL4qdZzpIJwdGlZdayGvGO4XkxRd_&usqp=CAU"
-                    alt="User Avatar">
-                </div>
-                <div class="card-footer">
-                  <div class="row">
-                    <div class="col-sm-4 border-right">
-                      <div class="description-block">
-                        <h5 class="description-header">EMAIL</h5>
-                        <span>mike@wazowski.com</span>
-                      </div>
-                      <!-- /.description-block -->
+                            <!-- Widget user -->
+                            <div class="card card-widget widget-user">
+                                <div class="widget-user-header text-white"
+                                     style="background: url('https://i.ytimg.com/vi/BEDlpGLVy3A/maxresdefault.jpg') center center;">
+                                    <h3 class="widget-user-username text-right"> {{ employee.name }} </h3>
+                                    <h5 class="widget-user-desc text-right"> {{ employee.surnames }} </h5>
+                                </div>
+                                <div class="widget-user-image">
+                                    <img class="img-circle elevation-2"
+                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5_LGBtY8DWoTjx6nxMzYWL4qdZzpIJwdGlZdayGvGO4XkxRd_&usqp=CAU"
+                                         alt="User Avatar">
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-4 border-right">
+                                            <div class="description-block">
+                                                <h5 class="description-header">EMAIL</h5>
+                                                <span>mike@wazowski.com</span>
+                                            </div>
+                                            <!-- /.description-block -->
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-sm-4 border-right">
+                                            <div class="description-block">
+                                                <h5 class="description-header">PHONE NUMBER</h5>
+                                                <span class="description-text">696969696</span>
+                                            </div>
+                                            <!-- /.description-block -->
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-sm-4">
+                                            <div class="description-block">
+                                                <h5 class="description-header">NIF</h5>
+                                                <span class="description-text">69696969A</span>
+                                            </div>
+                                            <!-- /.description-block -->
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                            <!-- /.widget-user -->
+                        </div>
+                        <!-- /.card-body -->
                     </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4 border-right">
-                      <div class="description-block">
-                        <h5 class="description-header">PHONE NUMBER</h5>
-                        <span class="description-text">696969696</span>
-                      </div>
-                      <!-- /.description-block -->
+                    <!-- /.card -->
+
+                    <strong><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#myModal"></i> Editar
+                        perfil</strong>
+
+                    <hr>
+
+                    <!-- Modal Edit Profile -->
+                    {{ include('modals/edit_profile.html.twig') }}
+                    <!-- /.edit_profileModal -->
+
+                    <!-- About Me Box -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">About Me</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <strong><i class="fas fa-birthday-cake"></i> Birthday</strong>
+
+                            <p class="text-muted">69/69/69</p>
+
+                            <hr>
+
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
+
+                            <p class="text-muted">Malibu, California</p>
+
+                            <hr>
+
+                            <strong><i class="fas fa-address-card"></i> Postcode</strong>
+
+                            <p class="text-muted">69696</p>
+
+                            <hr>
+
+                            <strong><i class="fas fa-user-md"></i> NSS</strong>
+
+                            <p class="text-muted">numero seguridad social</p>
+
+                            <hr>
+
+                            <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
+
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                                fermentum enim neque.
+                            </p>
+
+                            <hr>
+                            <strong><i class="fas fa-users"></i> Social Networks</strong>
+                            <div>
+                                <a href="#" class="icon-block">
+                                    <i class="fab fa-linkedin fa-3x"></i>
+                                </a>
+
+                                <a href="#" class="icon-block">
+                                    <i class="fab fa-twitter fa-3x"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4">
-                      <div class="description-block">
-                        <h5 class="description-header">NIF</h5>
-                        <span class="description-text">69696969A</span>
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
-                </div>
-              </div>
-              <!-- /.widget-user -->
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-<strong><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#myModal"></i> Editar perfil</strong>
-
-          <hr>
-
-          <!-- Modal Edit Profile -->
-          {{ include('modals/edit_profile.html.twig') }}
-          <!-- /.edit_profileModal -->
-
-          <!-- About Me Box -->
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">About Me</h3>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <strong><i class="fas fa-birthday-cake"></i> Birthday</strong>
-
-              <p class="text-muted">69/69/69</p>
-
-              <hr>
-
-              <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
-
-              <p class="text-muted">Malibu, California</p>
-
-              <hr>
-
-              <strong><i class="fas fa-address-card"></i> Postcode</strong>
-
-              <p class="text-muted">69696</p>
-
-              <hr>
-
-              <strong><i class="fas fa-user-md"></i> NSS</strong>
-
-              <p class="text-muted">numero seguridad social</p>
-
-              <hr>
-
-              <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
-
-              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.
-              </p>
-
-              <hr>
-              <strong><i class="fas fa-users"></i> Social Networks</strong>
-              <div>
-                <a href="#" class="icon-block">
-                  <i class="fab fa-linkedin fa-3x"></i>
-                </a>
-
-                <a href="#" class="icon-block">
-                  <i class="fab fa-twitter fa-3x"></i>
-                </a>
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
                 </div>
                 <!-- /.container-fluid -->
             </div>

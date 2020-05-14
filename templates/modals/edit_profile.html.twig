@@ -12,32 +12,32 @@
                 </div>
                 <div class="modal-body">
                     <!-- form start -->
-                    <form role="form">
+                    <form role="form" action=" {{ path('editProfile') }}" method= "POST">
                         <div class="card-body">
 
                             <div class="form-group"><i class="fas fa-envelope"></i>
                                 <label for="inputEmail">Email address</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                                <input type="email" class="form-control" id="inputEmail" name="inputEmail" value= " {{ employee.email}} " placeholder="Enter email">
                             </div>
 
                             <div class="form-group"><i class="fas fa-phone"></i>
                                 <label for="inputPhone">Phone Number</label>
-                                <input type="phone" class="form-control" id="inputPhone" placeholder="Phone">
+                                <input type="text" class="form-control" id="inputPhone" name="inputPhone" value= " {{ employee.phoneNumber}} " placeholder="Phone">
                             </div>
 
                             <div class="form-group"><i class="fas fa-map-marker-alt mr-1"></i>
                                 <label for="inputAddress">Address</label>
-                                <input type="address" class="form-control" id="inputAddress" placeholder="Address">
+                                <input type="text" class="form-control" id="inputAddress" name="inputAddress" value= " {{ employee.address}} " placeholder="Address">
                             </div>
 
                             <div class="form-group"><i class="fas fa-address-card"></i>
                                 <label for="inputPostcode">Postcode</label>
-                                <input type="postcode" class="form-control" id="inputPostcode" placeholder="Postcode">
+                                <input type="text" class="form-control" id="inputPostcode" name="inputPostcode" value= " {{ employee.postcode}} " placeholder="Postcode">
                             </div>
 
                             <div class="form-group"><i class="far fa-file-alt mr-1"></i>
-                                <label for="inputPassword">Notes</label>
-                                <textarea class="form-control" id="inputNotes" rows="5"></textarea>
+                                <label for="inputNotes">Notes</label>
+                                <textarea class="form-control" id="inputNotes" name="inputNotes" rows="5"> {{ employee.notes}} </textarea>
                             </div>
 
 
@@ -45,7 +45,7 @@
                                 <label for="inputProfilePic">Profile pic</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputProfilePic">
+                                        <input type="file" class="custom-file-input" id="inputProfilePic" name="inputProfilePic" >
                                         <label class="custom-file-label" for="inputProfilePic">Choose file</label>
                                     </div>
                                     <div class="input-group-append">
@@ -58,7 +58,7 @@
                                 <label for="inputBackground">Background Image</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputBackground">
+                                        <input type="file" class="custom-file-input" id="inputBackground" name="inputBackground" >
                                         <label class="custom-file-label" for="inputBackground">Choose file</label>
                                     </div>
                                     <div class="input-group-append">

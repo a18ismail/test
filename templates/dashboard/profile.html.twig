@@ -39,13 +39,13 @@
                             <!-- Widget user -->
                             <div class="card card-widget widget-user">
                                 <div class="widget-user-header text-white"
-                                     style="background: url('https://i.ytimg.com/vi/BEDlpGLVy3A/maxresdefault.jpg') center center;">
+                                     style="background: url('https://madridsecreto.co/wp-content/uploads/2020/04/foto-madrid-alcala-henares.jpg') center center;">
                                     <h3 class="widget-user-username text-right"> {{ employee.name }} </h3>
                                     <h5 class="widget-user-desc text-right"> {{ employee.surnames }} </h5>
                                 </div>
                                 <div class="widget-user-image">
                                     <img class="img-circle elevation-2"
-                                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5_LGBtY8DWoTjx6nxMzYWL4qdZzpIJwdGlZdayGvGO4XkxRd_&usqp=CAU"
+                                         src="https://cdn3.f-cdn.com/contestentries/1376995/30494909/5b566bc71d308_thumb900.jpg"
                                          alt="User Avatar">
                                 </div>
                                 <div class="card-footer">
@@ -69,7 +69,7 @@
                                         <div class="col-sm-4">
                                             <div class="description-block">
                                                 <h5 class="description-header">NIF</h5>
-                                                <span class="description-text">69696969A</span>
+                                                <span class="description-text"> {{employee.nif }} </span>
                                             </div>
                                             <!-- /.description-block -->
                                         </div>
@@ -108,36 +108,35 @@
 
                             <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
 
-                            <p class="text-muted">Malibu, California</p>
+                            <p class="text-muted"> {{employee.address }} </p>
 
                             <hr>
 
                             <strong><i class="fas fa-address-card"></i> Postcode</strong>
 
-                            <p class="text-muted">69696</p>
+                            <p class="text-muted"> {{employee.postcode }} </p>
 
                             <hr>
 
                             <strong><i class="fas fa-user-md"></i> NSS</strong>
 
-                            <p class="text-muted">numero seguridad social</p>
+                            <p class="text-muted"> {{employee.nss }} </p>
 
                             <hr>
 
                             <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                                fermentum enim neque.
+                            <p class="text-muted"> {{employee.notes }} 
                             </p>
 
                             <hr>
                             <strong><i class="fas fa-users"></i> Social Networks</strong>
                             <div>
-                                <a href="{{ employee.snsLinkedin }}" class="icon-block">
+                                <a href="{{ employee.snsLinkedin }}" target= "_blank" class="icon-block">
                                     <i class="fab fa-linkedin fa-3x"></i>
                                 </a>
 
-                                <a href="{{ employee.snsTwitter }}" class="icon-block">
+                                <a href="{{ employee.snsTwitter }}" target= "_blank" class="icon-block">
                                     <i class="fab fa-twitter fa-3x"></i>
                                 </a>
                             </div>

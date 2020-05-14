@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use App\Entity\Employee;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,13 +31,38 @@ class ProfileController extends AbstractController
     {
         //Aqui actualitzem les dades del empleat registrat
 
+        //rebre dades del formulari
+        $email = $request->get('inputEmail');
+        $phone = $request->get('inputPhone');
+        $address = $request->get('inputAddress');
+        $postcode = $request->get('inputPostcode');
+        $notes = $request->get('inputNotes');
+
+        $phone=(int)$phone;
+        $postcode=(int)$postcode;
+        
         //Conseguim ID per poder editar l'objecte
         $session = $request->getSession();
         $employee_id = $session->get('id');
 
-        //Fem un update de l'empleat per actualitzar les seves dades
+        $entityManager = $this->getDoctrine()->getManager();
+        $employee = $entityManager->getRepository(Employee::class)->find($employee_id);
 
+        //Fem un update de l'empleat per actualitzar les seves dades
+        
+        $employee->setEmail($email);
+
+        $employee->setPhoneNumber($phone);
+
+        $employee->setAddress($address);
+
+        $employee->setPostcode($postcode);
+
+        $employee->setNotes($notes);
+
+        $entityManager->flush();
         //Finalment enviem una resposta
+        return new RedirectResponse($this->generateUrl('profile'));
         //Ja que aquest metode nomes ha de rebre una petició POST i fer un update, no fem cap render de templates
         //Simplement respondem amb una resposta HTTP.
         //Aquesta resposta podra ser rebuda pel JS del perfil

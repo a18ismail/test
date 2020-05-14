@@ -4,3 +4,27 @@ index:
 homepage:
     path: /index
     controller: App\Controller\MainController::index
+dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index
+profile:
+    path: /profile
+    controller: App\Controller\DashboardController::profile
+operations:
+    path: /operations
+    controller: App\Controller\DashboardController::operations
+calendarOperations:
+    path: /calendarOperations
+    controller: App\Controller\DashboardController::calendarOperations
+calendarAvailability:
+    path: /calendarAvailability
+    controller: App\Controller\DashboardController::calendarAvailability
+notifications:
+    path: /notifications
+    controller: App\Controller\DashboardController::notifications
+mail:
+    path: /mail
+    controller: App\Controller\DashboardController::mail
+settings:
+    path: /settings
+    controller: App\Controller\DashboardController::settings

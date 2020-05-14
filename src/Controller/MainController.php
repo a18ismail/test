@@ -6,6 +6,8 @@ use App\Entity\Employee;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class MainController extends AbstractController
 {
@@ -14,7 +16,9 @@ class MainController extends AbstractController
      */
     public function index()
     {
-        return $this->render('main/templatelayout.html.twig');
+        return $this->render('main/landingLayout.html.twig', [
+            'login_status' => false,
+        ]);
     }
 
     /**
@@ -22,23 +26,39 @@ class MainController extends AbstractController
      */
     public function login(Request $request)
     {
+        //Per evitar problemes de sessió de moment tanquem la session cada vegada que s'intenta fer login
+        $session = $request->getSession();
+        $session->invalidate();
+
         //Rebre dades formulari Login
         $email = $request->get('inputEmail');
         $password = $request->get('inputPassword');
 
+        // TODO
         //Netejar dades i codificar contrasenya
         //També es pot fer amb JS costat client
         //Millor fer en costat servidor per assegurar integritat
-        // TODO
 
         //Comprobar dades de Empleat
-        $employee = $this->getDoctrine()->getRepository(Employee::class)->checkEmployeeLogin($email, $password);
+        $employees = $this->getDoctrine()->getRepository(Employee::class)->checkEmployeeLogin($email, $password);
 
         //Render resultat de Login
-        if ( sizeof($employee) == 0 ){
-            return $this->render('base.html.twig');
+        if ( sizeof($employees) == 0 ){
+            return $this->render('baseLanding.html.twig');
         } else{
-            return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0], 'login_status' => true]);
+
+            //Conseguir ID
+            $employee_id = $employees[0]->getId();
+
+            //Com encara no tenim control de usuaris implementat, utilitzem sessions de PHP senzilles
+            //La sessió només emmagatzema l'Id
+
+            //Iniciem la sessió de l'empleat
+            $session->start();
+            $session->set('id', $employee_id);
+
+            //Redirigir a Dashboard
+            return new RedirectResponse($this->generateUrl('dashboard'));
         }
     }
 
@@ -72,7 +92,7 @@ class MainController extends AbstractController
         if ( sizeof($employee) == 0 ){
             return $this->render('base.html.twig');
         } else{
-            return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0], 'login_status' => true]);
+            return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0]]);
         }
 
     }
@@ -80,10 +100,14 @@ class MainController extends AbstractController
     /**
      * @Route("/logout", name="logout")
      */
-    public function logout()
+    public function logout(Request $request)
     {
+        $session = $request->getSession();
+        $session->invalidate();
+
         return $this->render('main/logout.html.twig', [
             'login_status' => false,
         ]);
     }
+
 }

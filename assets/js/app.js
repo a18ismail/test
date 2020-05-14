@@ -1,11 +1,5 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
 
-// any CSS you import will output into a single css file (app.css in this case)
+//ASSETS CSS
 
 //IMPORTACIONS CSS PLUGINS
 import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
@@ -13,8 +7,10 @@ import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
 //IMPORTACIONS CSS PLANTILLA
 import '../css/adminlte.css';
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-import $ from 'jquery';
+//CSS PERSONALITZAT DEL PROJECTE
+
+// ASSETS JS
+
 //IMPORTACIONS DE LLIBRERIES I PLUGINS JS
 
 import 'admin-lte/plugins/jquery/jquery';
@@ -28,7 +24,9 @@ import './adminlte.js';
 //JS PERSONALITZAT DEL PROJECTE
 
 
-//IMPORTS DISPONIBLES JS
+///////////////////////////////////////////////////////////////////////////////////
+
+//IMPORTS DISPONIBLES JS (No estan tots aqui)
 //import 'admin-lte/plugins/jquery/jquery';
 //import 'admin-lte/plugins/jquery-ui/jquery-ui.min';
 //import 'admin-lte/plugins/bootstrap/js/bootstrap.bundle.min';
@@ -41,7 +39,7 @@ import './adminlte.js';
 //import 'admin-lte/plugins/summernote/summernote-bs4.min';
 //import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min';
 
-//IMPORTS DISPONIBLES CSS
+//IMPORTS DISPONIBLES CSS (No estan tots aqui)
 //import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
 //import 'admin-lte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css';
 //import 'admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css';

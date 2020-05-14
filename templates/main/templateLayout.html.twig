@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}App{% endblock %}
+{% block title %}Dashboard - App{% endblock %}
 
 {% block body %}
     <div class="wrapper">
@@ -9,7 +9,7 @@
         <!-- /.topNavbar -->
 
         <!-- Side Navbar -->
-        {{ include('menu/sideNavBar.html.twig') }}
+        {{ include('menu/sideNavBar.html.twig', {'employee': employee}) }}
         <!-- /.sideNavbar -->
 
         <!-- Content Wrapper -->

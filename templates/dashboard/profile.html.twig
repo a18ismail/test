@@ -9,7 +9,7 @@
         <!-- /.topNavbar -->
 
         <!-- Side Navbar -->
-        {{ include('menu/sideNavBar.html.twig') }}
+        {{ include('menu/sideNavBar.html.twig', {'employee': employee}) }}
         <!-- /.sideNavbar -->
 
         <!-- Content Wrapper -->
@@ -21,7 +21,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Panell de control</h1>
+                            <h1 class="m-0 text-dark">Perfil de {{ employee.name }}</h1>
                         </div>
                         <div class="col-sm-6">
                         </div>
@@ -42,8 +42,8 @@
                 <!-- Add the bg color to the header using any of the bg-* classes -->
                 <div class="widget-user-header text-white"
                   style="background: url('https://i.ytimg.com/vi/BEDlpGLVy3A/maxresdefault.jpg') center center;">
-                  <h3 class="widget-user-username text-right">Mike Wazowski</h3>
-                  <h5 class="widget-user-desc text-right">Programador FP</h5>
+                  <h3 class="widget-user-username text-right"> {{ employee.name }} </h3>
+                  <h5 class="widget-user-desc text-right"> {{ employee.surnames }} </h5>
                 </div>
                 <div class="widget-user-image">
                   <img class="img-circle elevation-2"
@@ -89,93 +89,10 @@
 
           <hr>
 
-          <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
+          <!-- Modal Edit Profile -->
+          {{ include('modals/edit_profile.html.twig') }}
+          <!-- /.edit_profileModal -->
 
-                <div class="modal-header">
-                  <h4 class="modal-title">Editar la teva informació</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <!-- form start -->
-                  <form role="form">
-                    <div class="card-body">
-
-                      <div class="form-group"><i class="fas fa-envelope"></i>
-                        <label for="inputEmail">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
-                      </div>
-
-                      <div class="form-group"><i class="fas fa-phone"></i>
-                        <label for="inputPhone">Phone Number</label>
-                        <input type="phone" class="form-control" id="inputPhone" placeholder="Phone">
-                      </div>
-
-                      <div class="form-group"><i class="fas fa-map-marker-alt mr-1"></i>
-                        <label for="inputAddress">Address</label>
-                        <input type="address" class="form-control" id="inputAddress" placeholder="Address">
-                      </div>
-
-                      <div class="form-group"><i class="fas fa-address-card"></i>
-                        <label for="inputPostcode">Postcode</label>
-                        <input type="postcode" class="form-control" id="inputPostcode" placeholder="Postcode">
-                      </div>
-
-                      <div class="form-group"><i class="far fa-file-alt mr-1"></i>
-                        <label for="inputPassword">Notes</label>
-                        <textarea class="form-control" id="inputNotes" rows="5"></textarea>
-                      </div>
-
-
-                      <div class="form-group"><i class="fas fa-image"></i>
-                        <label for="inputProfilePic">Profile pic</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputProfilePic">
-                            <label class="custom-file-label" for="inputProfilePic">Choose file</label>
-                          </div>
-                          <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form-group"><i class="fas fa-image"></i>
-                        <label for="inputBackground">Background Image</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputBackground">
-                            <label class="custom-file-label" for="inputBackground">Choose file</label>
-                          </div>
-                          <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="inputCheck">
-                        <label class="form-check-label" for="inputCheck">Check me out</label>
-                      </div>
-                    </div>
-                    <!-- /.card-body -->
-
-                    <div class="card-footer">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </form>
-
-                </div>
-                <div class="modal-footer justify-content-between">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-              <!-- /.modal-content -->
-            </div>
-          </div>
           <!-- About Me Box -->
           <div class="card card-primary">
             <div class="card-header">

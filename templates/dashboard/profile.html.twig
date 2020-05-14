@@ -53,7 +53,7 @@
                                         <div class="col-sm-4 border-right">
                                             <div class="description-block">
                                                 <h5 class="description-header">EMAIL</h5>
-                                                <span>mike@wazowski.com</span>
+                                                <span> {{ employee.email}} </span>
                                             </div>
                                             <!-- /.description-block -->
                                         </div>
@@ -61,7 +61,7 @@
                                         <div class="col-sm-4 border-right">
                                             <div class="description-block">
                                                 <h5 class="description-header">PHONE NUMBER</h5>
-                                                <span class="description-text">696969696</span>
+                                                <span class="description-text"> {{ employee.phoneNumber }} </span>
                                             </div>
                                             <!-- /.description-block -->
                                         </div>
@@ -102,7 +102,7 @@
                         <div class="card-body">
                             <strong><i class="fas fa-birthday-cake"></i> Birthday</strong>
 
-                            <p class="text-muted">69/69/69</p>
+                            <p class="text-muted"> {{ employee.birthday|date("m/d/Y") }} </p>
 
                             <hr>
 

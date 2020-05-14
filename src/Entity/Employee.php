@@ -47,6 +47,37 @@ class Employee
      */
     private $phoneNumber;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $birthday;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $address;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $nss;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $notes;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $sns_twitter;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $sns_linkedin;
+
+    //birthday, address, postcode, nss, notes, sns_twitter, sns_linkedin
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +151,78 @@ class Employee
     public function setPhoneNumber(?int $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(?\DateTime $birthday): self
+    {
+        $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?string $address): self
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    public function getNss(): ?string
+    {
+        return $this->nss;
+    }
+
+    public function setNss(?string $nss): self
+    {
+        $this->nss = $nss;
+
+        return $this;
+    }
+
+    public function getNotes(): ?string
+    {
+        return $this->notes;
+    }
+
+    public function setNotes(?string $notes): self
+    {
+        $this->notes = $notes;
+
+        return $this;
+    }
+
+    public function getSnsTwitter(): ?string
+    {
+        return $this->sns_twitter;
+    }
+
+    public function setSnsTwitter(?string $sns_twitter): self
+    {
+        $this->sns_twitter = $sns_twitter;
+
+        return $this;
+    }
+
+    public function getSnsLinkedin(): ?string
+    {
+        return $this->sns_linkedin;
+    }
+
+    public function setSnsLinkedin(?string $sns_linkedin): self
+    {
+        $this->sns_linkedin = $sns_linkedin;
 
         return $this;
     }

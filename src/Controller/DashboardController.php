@@ -32,7 +32,6 @@ class DashboardController extends AbstractController
 
         $employee = $this->getDoctrine()->getRepository(Employee::class)->find($employee_id);
 
-        //var_dump(DashboardController::$employee->getId());
         return $this->render('main/templateLayout.html.twig', ['employee' => $employee]);
     }
 

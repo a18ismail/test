@@ -27,8 +27,6 @@ class MainController extends AbstractController
     public function login(Request $request)
     {
         //Per evitar problemes de sessió de moment tanquem la session cada vegada que s'intenta fer login
-        $session = $request->getSession();
-        $session->invalidate();
 
         //Rebre dades formulari Login
         $email = $request->get('inputEmail');
@@ -54,12 +52,13 @@ class MainController extends AbstractController
             //La sessió només emmagatzema l'Id
 
             //Iniciem la sessió de l'empleat
-            $session->start();
+            $session = $request->getSession();
             $session->set('id', $employee_id);
 
             //Redirigir a Dashboard
             return new RedirectResponse($this->generateUrl('dashboard'));
         }
+
     }
 
     /**

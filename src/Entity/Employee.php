@@ -68,14 +68,19 @@ class Employee
     private $notes;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(name="snsTwitter", type="string", length=255, nullable=true)
      */
-    private $sns_twitter;
+    private $snsTwitter;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(name="snsLinkedin", type="string", length=255, nullable=true)
      */
-    private $sns_linkedin;
+    private $snsLinkedin;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $postcode;
 
     //birthday, address, postcode, nss, notes, sns_twitter, sns_linkedin
     public function getId(): ?int
@@ -205,24 +210,36 @@ class Employee
 
     public function getSnsTwitter(): ?string
     {
-        return $this->sns_twitter;
+        return $this->snsTwitter;
     }
 
-    public function setSnsTwitter(?string $sns_twitter): self
+    public function setSnsTwitter(?string $snsTwitter): self
     {
-        $this->sns_twitter = $sns_twitter;
+        $this->snsTwitter = $snsTwitter;
 
         return $this;
     }
 
     public function getSnsLinkedin(): ?string
     {
-        return $this->sns_linkedin;
+        return $this->snsLinkedin;
     }
 
-    public function setSnsLinkedin(?string $sns_linkedin): self
+    public function setSnsLinkedin(?string $snsLinkedin): self
     {
-        $this->sns_linkedin = $sns_linkedin;
+        $this->snsLinkedin = $snsLinkedin;
+
+        return $this;
+    }
+
+    public function getPostcode(): ?int
+    {
+        return $this->postcode;
+    }
+
+    public function setPostcode(?int $postcode): self
+    {
+        $this->postcode = $postcode;
 
         return $this;
     }

@@ -25,7 +25,8 @@ class AppFixtures extends Fixture
             $nif = "XXXXXXXXX".$i;
             $phoneNumber = $i.$i.$i.$i.$i.$i.$i.$i.$i;
             $birthday = new \DateTime('@'.strtotime('now'));
-            $address = "C/ Rambla Barcelona";
+            $address = "C/ Rambla Gran 14 Barcelona, Espanya";
+            $postcode = 12458;
             $nss = "123456789";
             $notes = "Afegeix més informació sobre tu!";
             $sns_twitter = "https://www.twitter.com";
@@ -40,6 +41,7 @@ class AppFixtures extends Fixture
                 ->setPhoneNumber($phoneNumber)
                 ->setBirthday($birthday)
                 ->setAddress($address)
+                ->setPostcode($postcode)
                 ->setNss($nss)
                 ->setNotes($notes)
                 ->setSnsTwitter($sns_twitter)

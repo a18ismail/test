@@ -42,7 +42,11 @@ class MainController extends AbstractController
 
         //Render resultat de Login
         if ( sizeof($employees) == 0 ){
-            return $this->render('baseLanding.html.twig');
+            //Solució temporal en cas de introduir dades incorrectes
+            //Hauria de retornar una Request
+            return $this->render('main/errorDades.html.twig', [
+                'login_status' => false,
+            ]);
         } else{
 
             //Conseguir ID
@@ -89,7 +93,7 @@ class MainController extends AbstractController
         $employee = $this->getDoctrine()->getRepository(Employee::class)->checkEmployeeLogin($email, $password);
 
         if ( sizeof($employee) == 0 ){
-            return $this->render('base.html.twig');
+            return $this->render('baseLanding.html.twig');
         } else{
             return $this->render('dashboard/profile.html.twig', ['employee' => $employee[0]]);
         }

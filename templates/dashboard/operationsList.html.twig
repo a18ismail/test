@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}App{% endblock %}
+{% block title %}Operatives - App{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('operations') }}
+{% endblock %}
 
 {% block body %}
     <div class="wrapper">
@@ -13,28 +17,84 @@
         <!-- /.sideNavbar -->
 
         <!-- Content Wrapper -->
-        {# EN AQUEST DIV VA EL CONTINGUT #}
         <div class="content-wrapper">
-
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0 text-dark"> Operatives Assignades </h1>
-                        </div>
-                        <div class="col-sm-6">
+            {# EN AQUEST SECTION VA EL CONTINGUT DEL HEADER #}
+            <section class="content-header">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1 class="m-0 text-dark"> Operatives Assignades </h1>
+                            </div>
+                            <div class="col-sm-6"></div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- /.content-header -->
+                <!-- /.content-header -->
+            </section>
 
+            {# EN AQUEST SECTION VA EL CONTINGUT DEL CONTAINER PRINCIPAL #}
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Llista d'Operatives Assignades</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <table id="operationsList" class="table table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>Codi</th>
+                                            <th>Titol</th>
+                                            <th>Tipus</th>
+                                            <th>Data d'inici</th>
+                                            <th>Port</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
 
+                                        {% for operation in employee.operations %}
+                                            <tr>
+                                                <td><a data="{{ operation.code }}"> {{ operation.code }} </a> </td>
+                                                <td>{{ operation.title }}</td>
+                                                <td>{{ operation.type }}</td>
+                                                <td>{{ operation.dateStart|date("m/d/Y") }}</td>
+                                                <td> <a> {{ operation.port.code }} </a> </td>
+                                            </tr>
+                                        {% endfor %}
 
+                                        </tbody>
 
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+
+                {% for  operation in employee.operations %}
+                    {{ include('/modals/operationDetail.html.twig', {'operation': operation}) }}
+                {% endfor %}
+            </section>
+            <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+
+
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('operations') }}
+        {% endblock %}
 
         <!-- Main Footer -->
         {{ include('footers/footerDashboard.html.twig') }}

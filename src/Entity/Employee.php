@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EmployeeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -81,6 +83,16 @@ class Employee
      * @ORM\Column(type="integer", nullable=true)
      */
     private $postcode;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Operation::class, mappedBy="employees")
+     */
+    private $operations;
+
+    public function __construct()
+    {
+        $this->operations = new ArrayCollection();
+    }
 
     //birthday, address, postcode, nss, notes, sns_twitter, sns_linkedin
     public function getId(): ?int
@@ -240,6 +252,34 @@ class Employee
     public function setPostcode(?int $postcode): self
     {
         $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Operation[]
+     */
+    public function getOperations(): Collection
+    {
+        return $this->operations;
+    }
+
+    public function addOperation(Operation $operation): self
+    {
+        if (!$this->operations->contains($operation)) {
+            $this->operations[] = $operation;
+            $operation->addEmployee($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOperation(Operation $operation): self
+    {
+        if ($this->operations->contains($operation)) {
+            $this->operations->removeElement($operation);
+            $operation->removeEmployee($this);
+        }
 
         return $this;
     }

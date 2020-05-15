@@ -1,0 +1,16 @@
+{% extends 'baseLanding.html.twig' %}
+
+{% block title %}App{% endblock %}
+
+{% block body %}
+
+    {% block header %}
+        {{ include('menu/navBar.html.twig', {'login_status': login_status}) }}
+    {% endblock %}
+
+    <main role="main" class="container">
+        <h1 class="mt-5">Dades introduides incorrectes!
+            Torna-ho a intentar</h1>
+    </main>
+
+{% endblock %}

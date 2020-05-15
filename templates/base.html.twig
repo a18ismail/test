@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- CSS -->
         {% include('headers/templateCSS.html.twig') %}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -12,7 +13,7 @@
         {% block body %}
             <h3>SI ESTAS VEIENT AQUEST TEXT, LA RENDERITZACIÓ NO HA CARREGAT EL BODY</h3>
         {% endblock %}
-        <!-- JSSSSSSSSSSSS -->
+        <!-- JS -->
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

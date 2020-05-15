@@ -7,7 +7,8 @@ import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
 //IMPORTACIONS CSS PLANTILLA
 import '../css/adminlte.css';
 
-//CSS PERSONALITZAT DEL PROJECTE
+//CSS PERSONALITZAT D'AQUESTA PAGINA
+import '../css/app.css'
 
 // ASSETS JS
 
@@ -21,7 +22,7 @@ import 'admin-lte/plugins/chart.js/Chart.js'
 //IMPORTS JS PLANTILLA
 import './adminlte.js';
 
-//JS PERSONALITZAT DEL PROJECTE
+//JS PERSONALITZAT D'AQUESTA PAGINA
 
 
 ///////////////////////////////////////////////////////////////////////////////////

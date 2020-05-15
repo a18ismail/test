@@ -50,23 +50,23 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
-                                        <div class="col-sm-4 border-right">
+                                        <div class="col-sm-6 border-right">
                                             <div class="description-block">
-                                                <h5 class="description-header">EMAIL</h5>
+                                                <h5 class="description-header">Email</h5>
                                                 <span> {{ employee.email}} </span>
                                             </div>
                                             <!-- /.description-block -->
                                         </div>
                                         <!-- /.col -->
-                                        <div class="col-sm-4 border-right">
+                                        <div class="col-sm-3 border-right">
                                             <div class="description-block">
-                                                <h5 class="description-header">PHONE NUMBER</h5>
+                                                <h5 class="description-header">Num Telèfon</h5>
                                                 <span class="description-text"> {{ employee.phoneNumber }} </span>
                                             </div>
                                             <!-- /.description-block -->
                                         </div>
                                         <!-- /.col -->
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <div class="description-block">
                                                 <h5 class="description-header">NIF</h5>
                                                 <span class="description-text"> {{employee.nif }} </span>
@@ -83,11 +83,18 @@
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
+{#
+                    <div class="container-fluid mb-3">
+                        <div class="row d-flex justify-content-right">
+                            <strong><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#myModal"></i> Editar perfil</strong>
+                        </div>
+                    </div>#}
 
-                    <strong><i class="fas fa-pencil-alt" data-toggle="modal" data-target="#myModal"></i> Editar
-                        perfil</strong>
-
-                    <hr>
+                    <div class="d-flex mb-3 flex-row-reverse">
+                        <div class="p-2" data-toggle="modal" data-target="#myModal">
+                            <strong><i class="fas fa-pencil-alt" ></i> Editar perfil</strong>
+                        </div>
+                    </div>
 
                     <!-- Modal Edit Profile -->
                     {{ include('modals/edit_profile.html.twig') }}
@@ -96,29 +103,29 @@
                     <!-- About Me Box -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">About Me</h3>
+                            <h3 class="card-title">Informació personal</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <strong><i class="fas fa-birthday-cake"></i> Birthday</strong>
+                            <strong><i class="fas fa-birthday-cake"></i> Data de naixement</strong>
 
                             <p class="text-muted"> {{ employee.birthday|date("m/d/Y") }} </p>
 
                             <hr>
 
-                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
+                            <strong><i class="fas fa-map-marker-alt mr-1"></i> Adreça</strong>
 
                             <p class="text-muted"> {{employee.address }} </p>
 
                             <hr>
 
-                            <strong><i class="fas fa-address-card"></i> Postcode</strong>
+                            <strong><i class="fas fa-address-card"></i> Codi Postal</strong>
 
                             <p class="text-muted"> {{employee.postcode }} </p>
 
                             <hr>
 
-                            <strong><i class="fas fa-user-md"></i> NSS</strong>
+                            <strong><i class="fas fa-user-md"></i> Numero de la Seguretat Social</strong>
 
                             <p class="text-muted"> {{employee.nss }} </p>
 
@@ -130,7 +137,7 @@
                             </p>
 
                             <hr>
-                            <strong><i class="fas fa-users"></i> Social Networks</strong>
+                            <strong><i class="fas fa-users"></i> Xarxes Socials</strong>
                             <div>
                                 <a href="{{ employee.snsLinkedin }}" target= "_blank" class="icon-block">
                                     <i class="fab fa-linkedin fa-3x"></i>
